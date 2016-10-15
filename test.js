@@ -11,7 +11,7 @@ a.deepStrictEqual(pC(10, 15, 20, 1.3, 1.3), []) // 0 degrees
 const p = pC(10, 15, 20, .3, Math.PI)
 a(Array.isArray(p))
 a.strictEqual(p.length, 2)
-const [move, arc] = p
+const move = p[0]; const arc = p[1]
 
 a(Array.isArray(move))
 a.strictEqual(move.length, 3)
