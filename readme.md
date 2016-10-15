@@ -2,7 +2,7 @@
 
 **Compute the SVG path of a partial circle.**
 
-Compared to Canvas, defining artial circle is surprisingly complex. I searched for a module that encapsulates this complexity and [there are modules out there](svg progress circle). But all of them are not modular enough (aka opinionated).
+Compared to Canvas, defining a partial circle is surprisingly complex. I searched for a module that encapsulates this complexity and [there are modules out there](https://github.com/search?l=JavaScript&q=svg+progress+circle). But all of them are not modular enough (people call this opinionated).
 
 [![npm version](https://img.shields.io/npm/v/svg-partial-circle.svg)](https://www.npmjs.com/package/svg-partial-circle)
 [![build status](https://img.shields.io/travis/derhuerst/svg-partial-circle.svg)](https://travis-ci.org/derhuerst/svg-partial-circle)
