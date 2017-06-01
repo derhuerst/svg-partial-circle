@@ -1,21 +1,33 @@
 {
-	"name":         "svg-partial-circle",
-	"description":  "Compute the SVG path of a partial circle.",
-	"version":      "0.1.0",
-	"main":         "index.js",
-	"files":        ["index.js"],
-	"keywords":     ["svg", "circle", "partial", "progress", "loader", "path", "arc"],
-	"author":       "Jannis R <mail@jannisr.de>",
-	"homepage":     "http://derhuerst.github.io/svg-partial-circle/",
-	"repository":   "derhuerst/svg-partial-circle",
-	"bugs":         "https://github.com/derhuerst/svg-partial-circle/issues",
-	"license":      "ISC",
-	"engines":      {"node": ">=4"},
-	"devDependencies": {
-		"is-roughly-equal": "^0.1"
-	},
-	"scripts": {
-		"test": "node test.js",
-		"prepublish": "npm test"
-	}
+  "name": "svg-partial-circle",
+  "description": "Compute the SVG path of a partial circle.",
+  "version": "0.1.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "svg",
+    "circle",
+    "partial",
+    "progress",
+    "loader",
+    "path",
+    "arc"
+  ],
+  "author": "Jannis R <mail@jannisr.de>",
+  "homepage": "http://derhuerst.github.io/svg-partial-circle/",
+  "repository": "derhuerst/svg-partial-circle",
+  "bugs": "https://github.com/derhuerst/svg-partial-circle/issues",
+  "license": "ISC",
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1"
+  },
+  "scripts": {
+    "test": "ava",
+    "prepublish": "npm test"
+  }
 }
