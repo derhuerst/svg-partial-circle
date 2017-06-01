@@ -2,13 +2,15 @@
 
 // from http://stackoverflow.com/a/18473154
 const partialCircle = (cx, cy, r, start, end) => {
-	const fromX = cx + r * Math.cos(end)
-	const fromY = cy + r * Math.sin(end)
-	const toX = cx + r * Math.cos(start)
-	const toY = cy + r * Math.sin(start)
-	const large = (end - start) <= Math.PI ? '0' : '1'
+	const length = end - start
+	if (length === 0) return []
 
-	if ((end - start) === 0) return []
+	const fromX = r * Math.cos(end) + cx
+	const fromY = r * Math.sin(end) + cy
+	const toX = r * Math.cos(start) + cx
+	const toY = r * Math.sin(start) + cy
+	const large = length <= Math.PI ? '0' : '1'
+
 	return [
 		['M', fromX, fromY],
 		['A', r, r, 0, large, 0, toX, toY]
