@@ -17,8 +17,8 @@ a(Array.isArray(move))
 a.strictEqual(move.length, 3)
 
 a.deepStrictEqual(move[0], 'M')
-a(eql(.0001, move[1], 10 - 20))
-a(eql(.0001, move[2], 15))
+a(eql(.0001, move[1], 29.1067))
+a(eql(.0001, move[2], 20.9104))
 
 a(Array.isArray(arc))
 a.strictEqual(arc.length, 8)
@@ -29,8 +29,8 @@ a.strictEqual(arc[2], 20) // r
 a.strictEqual(arc[3], 0)
 a.strictEqual(arc[4], '0') // large flag
 a.strictEqual(arc[5], 0)
-a(eql(.0001, arc[6], 29.1067)) // toX
-a(eql(.0001, arc[7], 20.9104)) // toY
+a(eql(.0001, arc[6], 10 - 20)) // toX
+a(eql(.0001, arc[7], 15)) // toY
 
 
 
