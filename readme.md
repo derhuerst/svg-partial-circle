@@ -26,7 +26,7 @@ console.log(`<path d="${path}" />`)
 ```
 
 ```svg
-<path d="M -14.142135 14.142135 A 20 20 0 0 0 14.142135 14.142135" />
+<path d="M 44.14213562373095 44.14213562373095 A 20 20 0 1 1 44.14213562373095 15.857864376269045" />
 ```
 
 
@@ -44,6 +44,8 @@ partialCircle(cx, cy, r, start, end)
 ```
 
 `start` and `end` are in [radians](https://en.wikipedia.org/wiki/Radian). `partialCircle(…)` returns an array of [path commands](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d), each command being an array of its parts.
+
+`start < end` will draw a clockwise segment, while `start > end` a counterclockwise one.
 
 
 ## Contributing
