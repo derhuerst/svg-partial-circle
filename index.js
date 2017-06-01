@@ -9,11 +9,12 @@ const partialCircle = (cx, cy, r, start, end) => {
 	const fromY = r * Math.sin(start) + cy
 	const toX = r * Math.cos(end) + cx
 	const toY = r * Math.sin(end) + cy
-	const large = length <= Math.PI ? '0' : '1'
+	const large = Math.abs(length) <= Math.PI ? '0' : '1'
+	const sweep = length < 0 ? '0' : '1'
 
 	return [
 		['M', fromX, fromY],
-		['A', r, r, 0, large, 0, toX, toY]
+		['A', r, r, 0, large, sweep, toX, toY]
 	]
 }
 

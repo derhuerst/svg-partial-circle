@@ -28,7 +28,7 @@ a.strictEqual(arc[1], 20) // r
 a.strictEqual(arc[2], 20) // r
 a.strictEqual(arc[3], 0)
 a.strictEqual(arc[4], '0') // large flag
-a.strictEqual(arc[5], 0)
+a.strictEqual(arc[5], '1') // sweep flag
 a(eql(.0001, arc[6], 10 - 20)) // toX
 a(eql(.0001, arc[7], 15)) // toY
 
