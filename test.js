@@ -1,5 +1,11 @@
-import test from 'ava'
-import partialCircle from '.'
+'use strict'
+
+const a = require('assert')
+const eql = require('is-roughly-equal')
+
+const partialCircle = require('.')
+
+const degreesToRadians = degrees => ((degrees * Math.PI) / 180)
 
 /*
  * API's: cx, cy, r, start, end
@@ -13,62 +19,75 @@ import partialCircle from '.'
  * ]
  */
 
-const degreesToRadians = degrees => ((degrees * Math.PI) / 180)
-
-test('Should return array containg 2 an "M" and an "A" path command', t => {
+// should return array containg 2 an "M" and an "A" path command
+;(function ninetyDegrees () {
 	const actual = partialCircle(50, 50, 50, 0, degreesToRadians(90))
 	const M = actual[0]
 	const A = actual[1]
 
-	t.is(actual.length, 2)
-	t.is(M[0], 'M')
-	t.is(A[0], 'A')
-})
+	a.strictEqual(actual.length, 2)
+	a.strictEqual(M[0], 'M')
+	a.strictEqual(A[0], 'A')
+})()
 
-test('Should return an "M" command representing the point where the arc starts', t => {
+// should return an "M" command representing the point where the arc starts
+;(function correctStartPoint () {
 	const actual = partialCircle(50, 50, 50, 0, degreesToRadians(90))
 	const startX = actual[0][1]
 	const startY = actual[0][2]
 
-	t.is(startX, 100)
-	t.is(startY, 50)
-})
+	a.strictEqual(startX, 100)
+	a.strictEqual(startY, 50)
+})()
 
-test('Should return an "A" command representing the point where the arc ends', t => {
+// should return an "A" command representing the point where the arc ends
+;(function correctEndPoint () {
 	const actual = partialCircle(50, 50, 50, 0, degreesToRadians(90))
 	const endX = actual[1][6]
 	const endY = actual[1][7]
 
-	t.is(endX, 50)
-	t.is(endY, 100)
-})
+	a.strictEqual(endX, 50)
+	a.strictEqual(endY, 100)
+})()
 
-test('Should return an "A" command with correct radius values', t => {
+// should return an "A" command with correct radius values
+;(function correctRadius () {
 	const actual = partialCircle(50, 50, 50, 0, degreesToRadians(90))
 	const radiusX = actual[1][1]
 	const radiusY = actual[1][2]
 
-	t.is(radiusX, 50)
-	t.is(radiusY, 50)
-})
+	a.strictEqual(radiusX, 50)
+	a.strictEqual(radiusY, 50)
+})()
 
-test('Should return an "A" command with "large" flag disabled for arcs < 180°', t => {
+// should return an "A" command with "large" flag disabled for arcs < 180°
+;(function correctLargeFlag () {
 	const actual = partialCircle(50, 50, 50, 0, degreesToRadians(90))
 	const largeFlag = actual[1][4]
 
-	t.is(largeFlag, '0')
-})
+	a.strictEqual(largeFlag, '0')
+})()
 
-test('Should return an "A" command with "sweep" flag enabled for arcs with positive direction', t => {
+// should return an "A" command with "sweep" flag enabled for arcs with positive direction
+;(function correctSweepFlagPositive () {
 	const actual = partialCircle(50, 50, 50, 0, degreesToRadians(90))
 	const sweepFlag = actual[1][5]
 
-	t.is(sweepFlag, '1')
-})
+	a.strictEqual(sweepFlag, '1')
+})()
 
-test('Should return an "A" command with "sweep" flag disabled for arcs with negative direction', t => {
+// should return an "A" command with "sweep" flag disabled for arcs with negative direction
+;(function correctSweepFlagNegative () {
 	const actual = partialCircle(50, 50, 50, 0, degreesToRadians(-90))
 	const sweepFlag = actual[1][5]
 
-	t.is(sweepFlag, '0')
-})
+	a.strictEqual(sweepFlag, '0')
+})()
+
+// should return an empty path for 0 degrees
+;(function correctZeroDegrees () {
+	const actual = partialCircle(10, 15, 20, 1.3, 1.3)
+	a.deepStrictEqual(actual, []) // 0 degrees
+})()
+
+process.stdout.write('tests passing\n')
