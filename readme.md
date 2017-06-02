@@ -9,6 +9,7 @@ Compared to Canvas, defining a partial circle is surprisingly complex. I searche
 [![dependency status](https://img.shields.io/david/derhuerst/svg-partial-circle.svg)](https://david-dm.org/derhuerst/svg-partial-circle)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/svg-partial-circle.svg)](https://david-dm.org/derhuerst/svg-partial-circle#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/svg-partial-circle.svg)
+[![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
 
 ```js
 const partialCircle = require('svg-partial-circle')
