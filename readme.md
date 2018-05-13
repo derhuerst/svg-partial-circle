@@ -1,4 +1,4 @@
-# [svg-partial-circle](http://jannisr.de/svg-partial-circle/)
+# [svg-partial-circle](https://derhuerst.github.io/svg-partial-circle/)
 
 **Compute the SVG path of a partial circle.**
 
@@ -6,10 +6,19 @@ Compared to Canvas, defining a partial circle is surprisingly complex. I searche
 
 [![npm version](https://img.shields.io/npm/v/svg-partial-circle.svg)](https://www.npmjs.com/package/svg-partial-circle)
 [![build status](https://img.shields.io/travis/derhuerst/svg-partial-circle.svg)](https://travis-ci.org/derhuerst/svg-partial-circle)
-[![dependency status](https://img.shields.io/david/derhuerst/svg-partial-circle.svg)](https://david-dm.org/derhuerst/svg-partial-circle)
-[![dev dependency status](https://img.shields.io/david/dev/derhuerst/svg-partial-circle.svg)](https://david-dm.org/derhuerst/svg-partial-circle#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/svg-partial-circle.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
+[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
+
+
+## Installing
+
+```shell
+npm install svg-partial-circle
+```
+
+
+## Usage
 
 ```js
 const partialCircle = require('svg-partial-circle')
@@ -28,13 +37,6 @@ console.log(`<path d="${path}" />`)
 
 ```svg
 <path d="M 44.14213562373095 44.14213562373095 A 20 20 0 1 1 44.14213562373095 15.857864376269045" />
-```
-
-
-## Installing
-
-```shell
-npm install svg-partial-circle
 ```
 
 
