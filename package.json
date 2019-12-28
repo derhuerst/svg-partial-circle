@@ -3,7 +3,10 @@
 	"description":  "Compute the SVG path of a partial circle.",
 	"version":      "1.0.0",
 	"main":         "index.js",
-	"files":        ["index.js"],
+	"files": [
+		"index.js",
+		"example.js"
+	],
 	"keywords":     ["svg", "circle", "partial", "progress", "loader", "path", "arc"],
 	"author":       "Jannis R <mail@jannisr.de>",
 	"contributors": [
