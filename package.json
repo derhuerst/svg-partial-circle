@@ -1,22 +1,32 @@
 {
-	"name":         "svg-partial-circle",
-	"description":  "Compute the SVG path of a partial circle.",
-	"version":      "1.0.0",
-	"main":         "index.js",
+	"name": "svg-partial-circle",
+	"description": "Compute the SVG path of a partial circle.",
+	"version": "1.0.0",
+	"main": "index.js",
 	"files": [
 		"index.js",
 		"example.js"
 	],
-	"keywords":     ["svg", "circle", "partial", "progress", "loader", "path", "arc"],
-	"author":       "Jannis R <mail@jannisr.de>",
+	"keywords": [
+		"svg",
+		"circle",
+		"partial",
+		"progress",
+		"loader",
+		"path",
+		"arc"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
 	"contributors": [
 		"Andrea Carraro (https://github.com/toomuchdesign)"
 	],
-	"homepage":     "http://derhuerst.github.io/svg-partial-circle/",
-	"repository":   "derhuerst/svg-partial-circle",
-	"bugs":         "https://github.com/derhuerst/svg-partial-circle/issues",
-	"license":      "ISC",
-	"engines":      {"node": ">=6"},
+	"homepage": "http://derhuerst.github.io/svg-partial-circle/",
+	"repository": "derhuerst/svg-partial-circle",
+	"bugs": "https://github.com/derhuerst/svg-partial-circle/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
 	"devDependencies": {
 		"is-roughly-equal": "^0.1"
 	},

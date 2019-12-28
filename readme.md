@@ -1,4 +1,4 @@
-# [svg-partial-circle](https://derhuerst.github.io/svg-partial-circle/)
+# svg-partial-circle
 
 **Compute the SVG path of a partial circle.**
 
